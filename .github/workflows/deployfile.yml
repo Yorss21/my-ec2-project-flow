@@ -20,4 +20,5 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /var/www/my-ec2-project
+            git remote set-url origin https://${{ secrets.GIT_TOKEN }}@github.com/Yorss21/my-ec2-project.git
             sudo git pull origin main
